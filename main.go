@@ -8,7 +8,6 @@ import (
 
 type User struct {
 	Name string `json:"name"`
-	// Age  int64  `json:"age"`
 }
 
 func main() {
@@ -22,7 +21,6 @@ func UserInfo(w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("content-type", "application/json")
 	getuser := User{
 		Name: "Saksham Kumar",
-		// Age:  20,
 	}
 	switch req.Method {
 	case "GET":
